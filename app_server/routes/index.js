@@ -3,17 +3,13 @@ var router = express.Router();
 var ctrlLocations = require('../controllers/locations');
 var ctrlOthers = require('../controllers/others');
 
+/* Locations pages */
+router.get('/', ctrlOthers.angularApp);
+router.get('/location/:locationid', ctrlLocations.locationInfo);
+router.get('/location/:locationid/review/new', ctrlLocations.addReview);
+router.post('/location/:locationid/review/new', ctrlLocations.doAddReview);
 
-/* GET home page. */
-
-router.get('/location',ctrlLocations.locationInfo);
-router.get('/', ctrlLocations.homelist);
-
-router.get('/location/review/new', ctrlLocations.addReview);
+/* Other pages */
 router.get('/about', ctrlOthers.about);
+
 module.exports = router;
-// router.get('/', function(req, res) {
-//   res.render('index', { title: 'Welcome to MEAN(Mongodb,Express,Angularjs,Nodejs)' });
-// });
-//
-// module.exports = router;
