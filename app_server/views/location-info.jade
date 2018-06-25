@@ -1,0 +1,83 @@
+extends layout
+block content
+ .row.page-header
+    .col-lg-12
+         h1 2018 FIFA World Cup
+ .row
+    .col-xs-12.col-md-9
+        .row
+            .col-xs-12.col-sm-6
+                p.rating
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star-empty
+                    span.glyphicon.glyphicon-star-empty
+                p Russian Moscow 
+                    .panel.panel-primary
+                        .panel-heading
+                            h2.panel-title Opening Stadium
+                        .panel-body
+                            p Group Phase : 14.june - 28.june
+                            p Knockout Phase : 30.june - 11.july
+                            p Final,play off for 3 place : 14.july - 15.july
+                    .panel.panel-primary
+                        .panel-heading
+                            h2.panel-title Facilities
+                        .panel-body
+                            span.label.label-warning
+                                span.glyphicon.glyphicon-ok
+                                | &nbsp;Hot drinks
+                            | &nbsp;
+                            span.label.label-warning
+                                span.glyphicon.glyphicon-ok
+                                | &nbsp;Food
+                            | &nbsp;
+                            span.label.label-warning
+                                span.glyphicon.glyphicon-ok
+                                | &nbsp;Premium wifi
+                            | &nbsp;
+            .col-xs-12.col-sm-6.location-map
+                .panel.panel-primary
+                    .panel-heading
+                        h2.panel-title Location map
+                    .panel-body
+                        img.img-responsive.img-rounded(src='/images/staticmap.jpg')
+                    &nbsp; 
+                    a(href='http://maps.google.com/maps?q=59.4,43.4&t=k&z=10') Current Position
+        .row
+            .col-xs-12
+                .panel.panel-primary.review-panel
+                    .panel-heading
+                        a.btn.btn-default.pull-right(href='/location/review/new') Add review
+                        h2.panel-title Customer reviews
+                    .panel-body.review-container
+                        .row
+                            .review
+                                .well.well-sm.review-header
+                                    span.rating
+                                        span.glyphicon.glyphicon-star
+                                        span.glyphicon.glyphicon-star
+                                        span.glyphicon.glyphicon-star
+                                        span.glyphicon.glyphicon-star
+                                        span.glyphicon.glyphicon-star
+                                    span.reviewAuthor Simon Holmes
+                                    small.reviewTimestamp 16 July 2018
+            .col-xs-12
+                                    p What a great place. I can't say enough good things about it.
+                        .row
+                            .review
+                                .well.well-sm.review-header
+                                    span.rating
+                                        span.glyphicon.glyphicon-star
+                                        span.glyphicon.glyphicon-star
+                                        span.glyphicon.glyphicon-star
+                                        span.glyphicon.glyphicon-star-empty
+                                        span.glyphicon.glyphicon-star-empty
+                                    span.reviewAuthor Charlie Chaplin
+                                    small.reviewTimestamp 16 June 2013
+                                .col-xs-12
+                                    p It was okay. Coffee wasn't great, but the wifi was fast.
+    .col-xs-12.col-md-3
+        p.lead Lothar Matthaus was frightened at the Stadio Olimpico in Rome in 1990 – not of facing Diego Maradona, who he raves about, but of the FIFA World Cup™ Trophy.
+        p  “I was afraid of dropping it!” he admitted.In that Final, Matthaus revealed, “I was having some problems with my boots. The sole cracked and I had to play the second half with completely new boots.” 
