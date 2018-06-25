@@ -3,30 +3,29 @@ block content
     #banner.page-header
         .row
             .col-lg-6
-                h1 World Cup
-                    small &nbsp;FIFA 2018 worldcup match
+                h1= pageHeader.title
+                    small &nbsp;#{pageHeader.strapline}
+
     .row
         .col-xs-12.col-sm-8
             .row.list-group
-                .col-xs-12.list-group-item
-                    h4
-                        a(href="/location") Quarter-Finals
-                        small &nbsp;
-                            span.glyphicon.glyphicon-star
-                            span.glyphicon.glyphicon-star
-                            span.glyphicon.glyphicon-star
-                            span.glyphicon.glyphicon-star-empty
-                            span.glyphicon.glyphicon-star-empty
-                        span.badge.pull-right.badge-default 8 teams
-                    p.address Russian Moscow, Reading, RG6 1PS
-                    p
-                        span.label.label-warning Hot drinks
-                        | &nbsp;
-                        span.label.label-warning Food
-                        | &nbsp;
-                        span.label.label-warning Premium wifi
-                        | &nbsp;
-                    br
+                each location as locations    
+                    .col-xs-12.list-group-item
+                        h4
+                            a(href="/location")= location.name
+                            small &nbsp;
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star-empty
+                                span.glyphicon.glyphicon-star-empty
+                                span.glyphicon.glyphicon-star-empty
+                            span.badge.pull-right.badge-default=location.distance
+                        p.address=location.address
+                        p
+                            each facility in location.facilities
+                                span.label.label-warning= facility
+                                &nbsp;
+                        br
                 .col-xs-12.list-group-item
                     h4    
                         a(href="/location") Semi-Finals
