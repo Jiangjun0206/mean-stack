@@ -1,14 +1,10 @@
 extends layout
+
 block content
- #banner.page-header
+  #banner.page-header
     .row
-        .col-md-6.col-sm-12
-            h1= title
-    .row
-        .col-md-6.col-sm-12
-            p
-                | The FIFA World CupTM Trophy Tour by Coca-Cola is your chance to see the Original FIFA World Cup Trophy. From 9 September 2017 to 7 June 2018 fans from all over the world will get the chance to get their photo taken with the Original FIFA World Cup Trophy! Follow the tour, plan your experience or retrieve your photos here.
-                | <br /><br />
-                | To attend Matches of the 2018 FIFA World Cup Russia™ you need to obtain a FAN ID. Please visit www.fan-id.ru for more information. You can apply for your FAN ID after paying for your Tickets 
-                &nbsp;and receiving your Ticket confirmation email. Please also inform your Guests and Companions about the requirement of obtaining a FAN ID. The FAN ID has been introduced at the request of the Russian 
-                &nbsp; authorities for all fans visiting Matches at the 2018 FIFA World Cup Russia™. FIFA does not assume any liability or responsibility in respect of the application, issuance and use of the FAN ID.  
+      .col-md-6.col-sm-12
+        h1= title
+  .row
+    .col-md-6.col-sm-12
+      p !{(content).replace(/\n/g, '<br/>')}
